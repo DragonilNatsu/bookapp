@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
+import 'homepage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -203,7 +205,16 @@ class _LoginPageState extends State<LoginPage> {
                 
                 // Log In Button
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Homepage(),
+                      ),
+                    );
+
+
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF5B9FED),
                     padding: const EdgeInsets.symmetric(vertical: 16),
