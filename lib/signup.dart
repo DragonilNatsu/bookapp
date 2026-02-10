@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class signup extends StatefulWidget {
-  const signup({super.key});
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<signup> createState() => _signupState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _signupState extends State<signup> {
+class _SignupState extends State<Signup> {
   bool _obscurePassword = true;
   bool _obscureConfirmPassword = true;
   bool _agreedToTerms = false;
