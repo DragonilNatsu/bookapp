@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,16 +42,16 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const SizedBox(height: 40),
+                const SizedBox(height: 30),
                 
                 // Welcome Text
                 const Text(
-                  'Welcome',
+                  'Welcome ',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w900,
                   ),
                 ),
                 
@@ -67,9 +68,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 
-                const SizedBox(height: 40),
+                const SizedBox(height: 20),
                 
                 // Book Icon
+                //picture of a book (logo) start here
                 Center(
                   child: Container(
                     width: 120,
@@ -108,8 +110,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                
-                const SizedBox(height: 40),
+                //picture of a book (logo) end here
+                const SizedBox(height: 30),
                 
                 // Email TextField
                 Container(
@@ -130,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       prefixIcon: const Icon(
                         Icons.email_outlined,
-                        color: Colors.white54,
+                        color: Colors.blueAccent,
                       ),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.all(16),
@@ -164,8 +166,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       suffixIcon: IconButton(
                         icon: Icon(
-                          _obscurePassword
-                              ? Icons.visibility_off_outlined
+                          _obscurePassword ? Icons.visibility_off_outlined
                               : Icons.visibility_outlined,
                           color: Colors.white54,
                         ),
@@ -222,13 +223,13 @@ class _LoginPageState extends State<LoginPage> {
                 
                 const SizedBox(height: 24),
                 
-                // Or continue with
+                // Or continue with text with dividers
                 Row(
                   children: [
                     Expanded(
                       child: Divider(
                         color: Colors.white.withValues(alpha:0.2),
-                        thickness: 1,
+                        thickness: 2,
                       ),
                     ),
                     Padding(
@@ -244,7 +245,7 @@ class _LoginPageState extends State<LoginPage> {
                     Expanded(
                       child: Divider(
                         color: Colors.white.withValues(alpha:0.2),
-                        thickness: 1,
+                        thickness: 2,
                       ),
                     ),
                   ],
@@ -278,8 +279,8 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 12),
-                    Expanded(
+                   // const SizedBox(width: 12),
+                  /*  Expanded(
                       child: OutlinedButton.icon(
                         onPressed: () {},
                         icon: const Icon(Icons.apple),
@@ -295,7 +296,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                    ),
+                    ),*/
                   ],
                 ),
                 
@@ -313,7 +314,14 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                        builder: (context) => const signup(),
+                          ),
+                        );
+                      },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
                         minimumSize: const Size(0, 0),
